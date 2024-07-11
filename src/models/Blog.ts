@@ -9,7 +9,7 @@ export interface I_Blog extends mongoose.Document {
     author: string;
     createdAt: Date;
     updatedAt: Date;
-    keyWord: string[]
+    keyWords: string[]
 }
 
 //TODO: generate the slug or maybe allow users to create them? sell the custom slug, lol
@@ -42,7 +42,7 @@ const BlogSchema = new mongoose.Schema<I_Blog>({
     updatedAt: {
         type: Date
     },
-    keyWord: {
+    keyWords: {
         type: [String]
     }
 }, {
