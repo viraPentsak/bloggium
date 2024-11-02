@@ -5,8 +5,8 @@ import {fetchBlogs} from "@/db/queries/blogs";
 export const dynamic = 'force-dynamic';
 
 export default function BlogPage() {
-    return <div className="grid grid-cols-4 gap-5 p-5">
-        <div className="md:col-span-3">
+    return <div className="md:grid md:grid-cols-4 gap-5 p-5">
+        <div className="md:col-span-3 mb-4">
             <h1 className="text-2xl text-center pb-5">
                 Most popular blogs!
             </h1>
