@@ -1,11 +1,10 @@
 interface BlogPageProps {
-    params: {
-        slug: string
-    }
+    params: Promise<{ slug: string }>
 }
 
-export default function BlogPage({params}: BlogPageProps) {
+export default async function BlogPage({params}: BlogPageProps) {
+    const {slug} = await params;
     return <div className="py-5">
-        Blog page. Slug: <span className="text-red-500">{params.slug}</span>
+        Blog page. Slug: <span className="text-red-500">{slug}</span>
     </div>
 }
