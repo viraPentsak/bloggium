@@ -2,6 +2,8 @@ import React from "react";
 import BlogsList from "@/components/blogs/blogs-list";
 import {fetchBlogs} from "@/db/queries/blogs";
 
+export const dynamic = 'force-dynamic';
+
 export default function BlogPage() {
     return <div className="grid grid-cols-4 gap-5 p-5">
         <div className="md:col-span-3">
